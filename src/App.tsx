@@ -25,7 +25,7 @@ import { AiTestGeneratorModal } from './components/AiTestGeneratorModal';
 import { SplitScreenPreview } from './components/preview/SplitScreenPreview';
 import { DigitalExamPreview } from './components/preview/DigitalExamPreview';
 import { AccessibleReaderPreview } from './components/preview/AccessibleReaderPreview';
-import { StreamlinedPreviewBar } from './components/preview/StreamlinedPreviewBar';
+import { StreamlinedPreviewBar, PageFilter } from './components/preview/StreamlinedPreviewBar';
 import { BottomNavBar } from './components/BottomNavBar';
 import {
   ZoomIn,
@@ -62,7 +62,7 @@ export default function App() {
       ? (saved as PreviewUiAlternative)
       : 'official-booklet';
   });
-  const [pageFilter, setPageFilter] = useState<number | 'all'>('all');
+  const [pageFilter, setPageFilter] = useState<PageFilter>('all');
   const [zoomLevel, setZoomLevel] = useState<number>(100);
   const [showStylePanel, setShowStylePanel] = useState<boolean>(false);
   const [showValidationModal, setShowValidationModal] = useState<boolean>(false);
